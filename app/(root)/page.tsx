@@ -1,10 +1,17 @@
 import Header from "@/components/Header";
+import VideoCard from "@/components/VideoCard";
+import { dummyCards } from "@/constants";
 
 export default function HomePage() {
   return (
     <main className="wrapper page">
-      <Header title="All Videos" subHeader="Public Library"/>
-      <h1 className="text-2xl">Welcome to our app</h1>
+      <Header title="All Videos" subHeader="Public Library" />
+
+      <section className="video-grid">
+        {dummyCards.map((card) => (
+          <VideoCard {...card} key={card.id} />
+        ))}
+      </section>
     </main>
   );
 }
