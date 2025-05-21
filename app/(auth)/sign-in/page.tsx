@@ -1,5 +1,6 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -68,7 +69,13 @@ export default function SigninPage() {
             time!
           </p>
 
-          <button onClick={() => {}}>
+          <button
+            onClick={async () => {
+              return await authClient.signIn.social({
+                provider: "google",
+              });
+            }}
+          >
             <Image
               src="/assets/icons/google.svg"
               alt="Google Icon"
