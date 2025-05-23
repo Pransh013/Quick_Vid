@@ -18,7 +18,6 @@ type VideoFormValues = {
 declare interface FormFieldProps {
   id: string;
   label: string;
-  type?: string;
   value: string;
   onChange: (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>

@@ -198,7 +198,7 @@
     }
 
     .submit-button {
-      @apply bg-pink-100 text-white px-4 py-3 rounded-4xl cursor-pointer text-base font-semibold hover:bg-pink-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+      @apply bg-pink-100 text-white px-4 py-3 rounded-4xl cursor-pointer text-base font-semibold hover:bg-pink-600 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed;
     }
   }
 
@@ -295,12 +295,12 @@
     input,
     select,
     textarea {
-      @apply border border-gray-20 rounded-18 text-dark-100 placeholder:text-gray-100 py-2.5 px-4.5 focus:outline-pink-100 placeholder:font-medium text-base font-semibold;
+      @apply border border-gray-20 rounded-18 text-dark-100 placeholder:text-gray-100 py-2.5 px-4.5 focus:outline-pink-100 placeholder:font-medium text-base font-semibold resize-none;
     }
   }
   /* navbar */
   .navbar {
-    @apply h-[90px] border-b border-gray-20 flex items-center;
+    @apply h-[75px] border-b border-gray-20 flex items-center;
 
     nav {
       @apply flex items-center justify-between max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full;

@@ -14,6 +14,6 @@ export const auth = betterAuth({
       clientSecret: serverEnv.GOOGLE_CLIENT_SECRET,
     },
   },
-  plugins: [nextCookies()],
   baseURL: clientEnv.NEXT_PUBLIC_BASE_URL,
+  plugins: [nextCookies()],
 });
