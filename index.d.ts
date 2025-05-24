@@ -11,7 +11,6 @@ declare interface User {
 type VideoFormValues = {
   title: string;
   description: string;
-  tags: string;
   visibility: "public" | "private";
 };
 
@@ -47,7 +46,6 @@ declare interface TranscriptEntry {
 declare interface VideoFormValues {
   title: string;
   description: string;
-  tags: string;
   visibility: "public" | "private";
 }
 declare interface NavbarProps {
@@ -110,14 +108,13 @@ declare interface ImageWithFallbackProps extends Omit<ImageProps, "src"> {
   src: string | null;
 }
 
-type Visibility = string;
+type Visibility = "public" | "private";
 
 declare interface VideoDetails {
   videoId: string;
   title: string;
   description: string;
   thumbnailUrl: string;
-  tags: string | string[];
   visibility: Visibility;
   duration?: number | null;
 }
@@ -173,7 +170,6 @@ declare interface VideoWithUserResult {
     videoUrl: string;
     userId: string;
     views: number;
-    tags: string[];
     visibility: Visibility;
     createdAt: Date;
     updatedAt: Date;
@@ -194,7 +190,6 @@ declare interface VideoObject {
   videoUrl: string;
   userId: string;
   views: number;
-  tags: string[];
   visibility: Visibility;
   createdAt: Date;
   updatedAt: Date;

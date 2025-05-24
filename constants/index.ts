@@ -3,10 +3,10 @@ export const MAX_THUMBNAIL_SIZE = 10 * 1024 * 1024;
 
 export const BUNNY = {
   STREAM_BASE_URL: "https://video.bunnycdn.com/library",
-  STORAGE_BASE_URL: "https://sg.storage.bunnycdn.com/snapcast",
-  CDN_URL: "https://snapcast.b-cdn.net",
   EMBED_URL: "https://iframe.mediadelivery.net/embed",
-  TRANSCRIPT_URL: "https://vz-47a08e64-84d.b-cdn.net",
+  STORAGE_BASE_URL: "https://storage.bunnycdn.com/quick-vid",
+  CDN_URL: "https://quick-vid.b-cdn.net",
+  TRANSCRIPT_URL: "https://vz-862de6d3-d1e.b-cdn.net",
 };
 
 export const emojis = ["😂", "😍", "👍"];
@@ -47,7 +47,19 @@ export const DEFAULT_RECORDING_CONFIG = {
   videoBitsPerSecond: 2500000,
 };
 
-export const dummyCards = [
+type DummyCards = {
+  id: string;
+  title: string;
+  thumbnail: string;
+  createdAt: Date;
+  userImg: string;
+  username: string;
+  views: number;
+  visibility: "public" | "private";
+  duration: number;
+};
+
+export const dummyCards: DummyCards[] = [
   {
     id: "1",
     title: "SnapChat Message",

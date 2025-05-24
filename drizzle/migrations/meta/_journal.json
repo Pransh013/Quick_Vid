@@ -8,6 +8,13 @@
       "when": 1747859575735,
       "tag": "0000_careful_gauntlet",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1748071758783,
+      "tag": "0001_sleepy_mastermind",
+      "breakpoints": true
     }
   ]
 }
