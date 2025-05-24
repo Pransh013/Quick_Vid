@@ -11,7 +11,7 @@ declare interface User {
 type VideoFormValues = {
   title: string;
   description: string;
-  visibility: "public" | "private";
+  visibility: Visibility;
 };
 
 declare interface FormFieldProps {
@@ -46,7 +46,7 @@ declare interface TranscriptEntry {
 declare interface VideoFormValues {
   title: string;
   description: string;
-  visibility: "public" | "private";
+  visibility: Visibility;
 }
 declare interface NavbarProps {
   user: User | undefined;
@@ -79,13 +79,14 @@ declare interface VideoCardProps {
 }
 
 declare interface VideoDetailHeaderProps {
+  id: string;
   title: string;
   createdAt: Date;
   userImg: string | null | undefined;
   username?: string;
   videoId: string;
   ownerId: string;
-  visibility: string;
+  visibility: Visibility;
   thumbnailUrl: string;
 }
 

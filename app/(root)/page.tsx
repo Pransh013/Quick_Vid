@@ -1,7 +1,6 @@
 import EmptyState from "@/components/EmptyState";
 import Header from "@/components/Header";
 import VideoCard from "@/components/VideoCard";
-import { dummyCards } from "@/constants";
 import { getAllVideos } from "@/lib/actions/video";
 
 export default async function HomePage({ searchParams }: SearchParams) {
@@ -22,7 +21,7 @@ export default async function HomePage({ searchParams }: SearchParams) {
             <VideoCard
               key={video.id}
               {...video}
-              id={video.videoId}
+              id={video.id}
               thumbnail={video.thumbnailUrl}
               username={user?.name || "Guest User"}
               userImg={user?.image || ""}

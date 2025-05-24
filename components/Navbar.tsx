@@ -1,14 +1,15 @@
-"use client"
+"use client";
 
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect, useRouter } from "next/navigation";
 
-const user = {};
-
 const Navbar = () => {
   const router = useRouter();
+  const { data: session } = authClient.useSession();
+  const user = session?.user;
+
   return (
     <header className="navbar">
       <nav>
@@ -24,9 +25,9 @@ const Navbar = () => {
 
         {user && (
           <figure className="flex gap-8 items-center">
-            <button onClick={() => router.push("/profile/123456")}>
+            <button onClick={() => router.push(`/profile/${user.id}`)}>
               <Image
-                src="/assets/images/dummy.jpg"
+                src={user.image || "/assets/images/dummy.jpg"}
                 alt="user"
                 width={36}
                 height={36}

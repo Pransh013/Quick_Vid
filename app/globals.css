@@ -81,7 +81,7 @@
 
 @layer components {
   .wrapper {
-    @apply max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-32;
   }
 
   .wrapper-md {
@@ -207,7 +207,7 @@
     @apply flex flex-col lg:flex-row gap-7.5;
 
     .content {
-      @apply flex flex-col gap-6 w-full;
+      @apply flex flex-col items-center justify-center gap-6 w-full;
     }
   }
 
@@ -303,7 +303,7 @@
     @apply h-[75px] border-b border-gray-20 flex items-center;
 
     nav {
-      @apply flex items-center justify-between max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full;
+      @apply flex items-center justify-between max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-32 w-full;
 
       a {
         @apply flex items-center gap-2.5;
@@ -594,7 +594,7 @@
 
   /* video player */
   .video-player {
-    @apply relative aspect-video w-full rounded-2xl bg-[#000] flex-none;
+    @apply relative aspect-video w-full rounded-2xl flex-none ;
 
     div {
       @apply absolute inset-0 flex items-center justify-center bg-gray-900 rounded-2xl;
