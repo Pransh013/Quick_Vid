@@ -9,8 +9,6 @@ export const BUNNY = {
   TRANSCRIPT_URL: "https://vz-862de6d3-d1e.b-cdn.net",
 };
 
-export const emojis = ["😂", "😍", "👍"];
-
 export const filterOptions = [
   "Most Viewed",
   "Most Recent",

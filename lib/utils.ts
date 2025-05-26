@@ -176,33 +176,6 @@ export const createAudioMixer = (
   return destination;
 };
 
-export const setupMediaRecorder = (stream: MediaStream) => {
-  try {
-    return new MediaRecorder(stream, DEFAULT_RECORDING_CONFIG);
-  } catch {
-    return new MediaRecorder(stream);
-  }
-};
-
-export const getVideoDuration = (url: string): Promise<number | null> =>
-  new Promise((resolve) => {
-    const video = document.createElement("video");
-    video.preload = "metadata";
-    video.onloadedmetadata = () => {
-      const duration =
-        isFinite(video.duration) && video.duration > 0
-          ? Math.round(video.duration)
-          : null;
-      URL.revokeObjectURL(video.src);
-      resolve(duration);
-    };
-    video.onerror = () => {
-      URL.revokeObjectURL(video.src);
-      resolve(null);
-    };
-    video.src = url;
-  });
-
 export const setupRecording = (
   stream: MediaStream,
   handlers: RecordingHandlers
