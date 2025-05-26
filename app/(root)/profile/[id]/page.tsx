@@ -12,7 +12,8 @@ export default async function ProfilePage({
   const { query, filter } = await searchParams;
 
   const { user, videos} = await getAllVideosByUser(id, query, filter);
-  if(!user) redirect("/404")
+  if (!user) redirect("/404")
+  
   return (
     <div className="wrapper page">
       <Header
