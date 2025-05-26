@@ -139,11 +139,11 @@ export const getAllVideos = withErrorHandling(
     const session = await auth.api.getSession({
       headers: await headers(),
     });
-    const userId = session?.user.id!;
+    const userId = session?.user.id;
 
     const visibilityCondition = or(
       eq(videos.visibility, "public"),
-      eq(videos.userId, userId)
+      eq(videos.userId, userId!)
     );
 
     const whereCondition = searchQuery.trim()

@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { filterOptions, ICONS } from "@/constants";
+import { filterOptions } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import DropdownList from "./DropdownList";
@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 import { updateURLParams } from "@/lib/utils";
 
 const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
-
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
