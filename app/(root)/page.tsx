@@ -21,7 +21,7 @@ export default async function HomePage({ searchParams }: SearchParams) {
             <VideoCard
               key={video.id}
               {...video}
-              id={video.id}
+              id={video.videoId}
               thumbnail={video.thumbnailUrl}
               username={user?.name || "Guest User"}
               userImg={user?.image || ""}
